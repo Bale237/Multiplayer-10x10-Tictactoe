@@ -1,0 +1,527 @@
+/*
+  TIC TAC TOE styling. This CSS is organised as follows:
+  -- Roughly follows the order of elements on the page
+  1. BODY and WRAPPER and generic header styles
+  2. Generic header styling
+  3. HEADER styles for header across whole page
+  4. GAME space styles including game board and elements around the board
+  5. SCORE space styles including score table and elements around the table
+  6. Button styles for various buttons
+  7. FOOTER styles for footer across whole page
+  8. CONFIG form styling (for the Menu config form popup)
+*/
+
+/* BODY and WRAPPER div -- surrounds all content */
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+
+#wrapper {
+  position: relative;
+  font-family: 'Lato', sans-serif;
+  height: 100%;
+}
+/* { end } BODY and WRAPPER div */
+
+/* Generic header styles */
+/* H1 styled in HEADER div styles below */
+h6 {
+  margin: 0;
+  color: rgb(85, 85, 85);
+  font-size: 1em;
+}
+/* { end } Generic header styles */
+
+/* HEADER div that goes across top of whole page */
+header {
+  height: 100px;
+  width: 100%;
+  background-color: rgb(26, 37,47);
+}
+
+/* H1 styled here as it only appears in the HEADER */
+h1 {
+  margin: 0 50px;
+  padding-top: 23px;
+  width: 400px;
+  text-align: left;
+  font-size: 2.4em;
+  color: white;
+  height: 77px;
+}
+/* { { end } } HEADER div */
+
+/* Game Playing Area Styling */
+/* GAME SPACE div wrapping the whole playing area */
+#gamespace {
+  width: 70%;
+  height: 600px;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+/* GAME HEADER div that appears above the game board */
+#gameheader {
+  width: 480px;
+  margin: 5px auto;
+}
+
+/* GAME HEADER MESSAGE div that appears inside the GAME HEADER to the left */
+#gameheadermessage {
+  width: 255px;
+  margin-top: 25px;
+  margin-left: 15px;
+  display: inline-block;
+}
+
+/* GAME CONFIG div that appears inside the GAME HEADER to the right */
+/* --- contains the game config button */
+#gameconfig {
+  display: inline-block;
+  text-align: right;
+  width: 200px;
+}
+
+/* GAME BOARD div that appears below the GAME HEADER */
+/* --- contains the game board with the tiles, etc */
+#gameboard {
+  width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+/* TILE class that appears as each square of the game board */
+.tile {
+  border-radius: 20px;
+  background-color: rgb(153, 204, 255);
+}
+
+/* TILE class hover for when user mouse overs a tile */
+.tile:hover {
+  background-color: rgb(85, 90, 104);
+}
+
+/* ICON div class which appears within each game tile */
+/* --- is used to enable Font Awesome fonts to be used */
+.icon {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+}
+
+/* GAME FOOTER div that appears below the GAME BOARD */
+/* --- contains the Game Restart button */
+#gamefooter {
+  width: 480px;
+  margin: 0 auto;
+}
+
+/* GAME { end } MESSAGE div that describes the game result */
+/* --- is a hidden div that appears at the { end } of the game */
+#gameendmessage {
+  position: absolute;
+  display: none;
+  z-index: 10;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.85);
+  font-size: 40px;
+  font-weight: 500;
+  color: rgb(44, 62, 80);
+}
+/* { end } Game Playing Area Styling */
+
+/* Score Table Area Styling */
+/* SCORE SPACE div referring to the whole column to the right of the game space */
+#scorespace {
+  height: 600px;
+  display: inline-block;
+  position: absolute;
+  margin: 0 auto;
+}
+
+/* SCORE HEADER div that appears above the score table */
+#scoreheader {
+  margin: 5px auto;
+}
+
+/* SCORE HEADER MESSAGE div that is inside the SCORE HEADER */
+#scoreheadermessage {
+  margin-top: 25px;
+  margin-left: 15px;
+  display: inline-block;
+}
+
+/* SCORE TABLE SPACE div that contains the score table */
+#scoretablespace {
+  margin: 15px auto;
+}
+
+/* SCORE TABLE table styling */
+#scoretable {
+  border-collapse: collapse;
+  width: 80%;
+  margin-left: 10px;
+}
+
+/* SCORE TABLE header styling */
+#scoretable th {
+  border: 1px solid rgb(105, 105, 105);
+  background-color: rgb(206, 225, 255);
+  font-size: 1em;
+  font-weight: 700;
+  width: 180px;
+}
+
+/* SCORE TABLE data cells styling */
+#scoretable td {
+  text-align: center;
+  font-size: 0.9em;
+  border: 1px solid rgb(105, 105, 105);
+}
+
+/* SCORE TABLE footer styling containing player totals */
+#scoretable tfoot {
+  background-color: rgb(150, 188, 247);
+}
+
+/* SCORE FOOTER div that appears at the bottom of the score space */
+#scorefooter {
+  margin: 0 10px auto;
+}
+/* { end } Score Table Area Styling */
+
+/* Button Styling */
+/* RESTART button that appears below the game board */
+#restartbutton {
+  background-color: rgb(100, 100, 100);
+  border: 1px solid rgb(100, 100, 100);
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  text-align: center;
+  width: 100px;
+  height: 35px;
+  margin-left: 10px;
+  margin-top: 10px;
+  outline: none;
+}
+
+/* RESTART button hover for when user mouse overs the button */
+#restartbutton:hover {
+  background-color: white;
+  color: rgb(100, 100, 100);
+}
+
+/* CONFIG button that appears to the right above the game board */
+#configbutton {
+  background-color: rgb(100, 100, 100);
+  border: 1px solid rgb(100, 100, 100);
+  color: white;
+  font-size: 0.6em;
+  border-radius: 5px;
+  text-align: center;
+  height: 16px;
+  margin-right: 10px;
+  outline: none;
+}
+
+/* CONFIG button hover for when user mouse overs the button */
+#configbutton:hover {
+  background-color: white;
+  color: rgb(100, 100, 100);
+}
+/* { end } Button Styling */
+
+/* FOOTER that appears across the bottom of the whole page */
+footer {
+  position: absolute;
+  height: 80px;
+  width: 100%;
+  background-color: rgb(192, 57, 43);
+  color: white;
+}
+
+/* FOOTER Paragraph tag styling */
+footer p {
+  margin-top: 13px;
+  margin-left: 25px;
+  margin-bottom: 0;
+  font-size: 1.2em;
+  width: 225px;
+}
+
+/* BYLINE div styling that appears below the main footer message */
+#byline {
+  font-size: 1em;
+  color: rgb(146, 145, 145);
+  margin-top: 2px;
+  margin-left: 25px;
+  width: 218px;
+  background-color: white;
+  height: 22px;
+  padding-left: 2px;
+  padding-top: 2px;
+  padding: 2px;
+}
+
+/* GA LOGO styling that appears inside the by line */
+#byline img {
+  width: 20px;
+  height: 20px;
+  float: left;
+  padding-right: 2px;
+}
+/* { end } FOOTER styling */
+
+/* FORM STYLING */
+/* The Menu (background) */
+.Menu {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Menu Content/Box */
+.Menu-content {
+  /* background-color: #fefefe; */
+  margin: 15% 24%;
+  padding: 10px;
+  border: 1px solid #888;
+  width: 50%;
+  background-color: #94b8b8;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.playername{
+  display: block;
+  width: 95%;
+  margin: 10px auto;
+  height: 30px;
+  font-size: 1rem;
+}
+
+.newGame,
+.connectBtn {
+    display: block;
+    width: 95%;
+    margin: 10px auto;
+    height: 30px;
+    color: white;
+    font-size: 1rem;
+    background-color: #006666;
+}
+
+.joinLabel {
+    text-align: center;
+    display: block;
+    width: 95%;
+    margin: 10px auto;
+    margin-bottom: 0px;
+    height: 30px;
+    color: white;
+    font-size: 1rem;
+    background-color: #006666;
+}
+
+.flex-col2 ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.flex-col2 ul li {
+    /* display: block; */
+    width: 95%;
+    margin: 0 auto;
+    padding: 5px;
+    height: 30px;
+    /* color: white; */
+    font-size: 1rem;
+    background-color: #dfecec;
+}
+
+.flex-col2 ul li:hover {
+    background-color: #75a3a3;
+}
+
+/* The Close Button */
+.close {
+  color: #FFFFFF;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button[type='submit'] {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    /* margin-top: 0x; */
+    height: 30px;
+    color: white;
+    font-size: 1.3rem;
+    background-color: #006666;
+}
+
+.hide{
+    display: none;
+}
+/* { end } FORM STYLING */
+/* { end } CSS */
+
+@media (max-width: 480px){
+  h1 {
+    margin: 0 50px;
+    padding-top: 23px;
+    width: 70%;
+    text-align: left;
+    font-size: 2.4em;
+    color: white;
+    height: 77px;
+  }
+
+  #gamespace {
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  #gameheader {
+    width: 100%;
+    margin: 5px auto;
+  }
+
+  #gameheadermessage {
+    width: 56%;
+    margin-top: 25px;
+    margin-left: 15px;
+    display: inline-block;
+  }
+
+  #gameconfig {
+    display: inline-block;
+    text-align: right;
+    width: 30%;
+  }
+
+  #gameboard {
+    width: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  #gamefooter {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #gameendmessage {
+    position: absolute;
+    display: none;
+    z-index: 10;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+    font-weight: 250;
+    color: rgb(44, 62, 80);
+    height: 115px;
+    width: 150px;
+    padding: : 55px 10px 0px;
+  }
+
+  .tile {
+    border-radius: 12.5px;
+    background-color: rgb(153, 204, 255);
+    height: 27px;
+    width: 27px;
+    margin: 1.5px;
+    font-size: 13.5px;
+  }
+
+  #scorespace {
+    height: 200px;
+    display: block;
+    /* position: absolute; */
+    margin: 0 auto;
+  }
+
+  /* SCORE HEADER div that appears above the score table */
+  #scoreheader {
+    margin: 5px auto;
+  }
+
+  /* SCORE HEADER MESSAGE div that is inside the SCORE HEADER */
+  #scoreheadermessage {
+    margin-top: 0px;
+    margin-left: 15px;
+    display: inline-block;
+  }
+
+  /* SCORE TABLE SPACE div that contains the score table */
+  #scoretablespace {
+    margin: 15px auto;
+  }
+
+  /* SCORE TABLE table styling */
+  #scoretable {
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: 10px;
+  }
+
+  /* SCORE TABLE header styling */
+  #scoretable th {
+    border: 1px solid rgb(105, 105, 105);
+    background-color: rgb(206, 225, 255);
+    font-size: 0.9em;
+    font-weight: 700;
+    width: 100px;
+  }
+
+  /* SCORE TABLE data cells styling */
+  #scoretable td {
+    text-align: center;
+    font-size: 0.8em;
+    border: 1px solid rgb(105, 105, 105);
+  }
+
+  /* SCORE TABLE footer styling containing player totals */
+  #scoretable tfoot {
+    background-color: rgb(150, 188, 247);
+  }
+
+  /* SCORE FOOTER div that appears at the bottom of the score space */
+  #scorefooter {
+    margin: 0 10px auto;
+  }
+
+  footer {
+    height: 80px;
+    width: 100%;
+    background-color: rgb(192, 57, 43);
+    color: white;
+    margin-top: 200px
+  }
+}
